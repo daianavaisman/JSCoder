@@ -1,0 +1,96 @@
+/* Acordeón Novias */
+.acordeonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1;
+    transition: all 1s ease-in-out;
+    height: 55vmin;
+    position: relative;
+    &:hover {
+        flex-grow: 2;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s ease-in-out;
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}
+
+/* Carousel Testimonials */
+.testimonials-bg {
+    opacity: 0.2;
+}
+
+.testimonials-title {
+    font-weight: bolder;
+}
+
+.testimonials {
+    text-align: center;
+}
+
+.comillas {
+    max-width: 40px;
+}
+
+.comillas-open {
+    margin-right: 10px;
+}
+
+.comillas-close {
+    margin-left: 10px;
+}
+
+.testimonials-by {
+    font-family: Moontime;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 414px) {
+
+    .comillas {
+        max-width: 30px;
+    }
+
+    .testimonials-bg {
+        display: none;
+    }
+
+    .testimonials-bg {
+        opacity: 0;
+        max-width: 0;
+    }
+
+    .caption-responsive {
+        position: relative;
+        margin: 0 auto;
+        width: 70%;
+        left: 0;
+    }
+}  
+
+@media only screen and (min-width: 415px) and (max-width: 960px) {
+    .caption-responsive {
+        position: relative;
+        margin: 0 auto;
+        width: 70%;
+        left: 0;
+    }
+
+    .testimonials-bg {
+        opacity: 0;
+        max-width: 0;
+    }
+}
